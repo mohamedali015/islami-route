@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/UI/Home/Quran/verses_content.dart';
-import 'package:islami/UI/Theme/mytheme.dart';
 import 'package:islami/UI/defult_scaffold.dart';
 
 class QuranDetails extends StatefulWidget {
@@ -32,7 +31,7 @@ class _QuranDetailsState extends State<QuranDetails> {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           child: verses.isNotEmpty
-              ? ListView.separated(
+              ? ListView.builder(
                   itemBuilder: (context, index) {
                     return VersesContent(
                       content: verses[index],
@@ -40,12 +39,6 @@ class _QuranDetailsState extends State<QuranDetails> {
                     );
                   },
                   itemCount: verses.length,
-                  separatorBuilder: (context, index) => Container(
-                    height: 2,
-                    color: MyThemeData.lightPrimary,
-                    width: double.infinity,
-                    margin: const EdgeInsets.symmetric(horizontal: 64),
-                  ),
                 )
               : const Center(child: CircularProgressIndicator()),
         ),

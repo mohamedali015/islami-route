@@ -252,21 +252,25 @@ class QuranTap extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: Text(
-                  "Chapter Name",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 25,
+                child: Center(
+                  child: Text(
+                    "Chapter Name",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 25,
+                    ),
                   ),
                 ),
               ),
               Expanded(
-                child: Text(
-                  "Verses Name",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 25,
+                child: Center(
+                  child: Text(
+                    "Verses Name",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 25,
+                    ),
                   ),
                 ),
               ),
