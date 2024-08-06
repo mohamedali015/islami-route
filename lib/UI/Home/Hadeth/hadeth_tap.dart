@@ -28,12 +28,12 @@ class _HadethTapState extends State<HadethTap> {
           height: 5,
           thickness: 2,
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Text(
             "El-Ahadeth",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
         const Divider(

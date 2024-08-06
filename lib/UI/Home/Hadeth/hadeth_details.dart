@@ -14,11 +14,12 @@ class HadethDetails extends StatelessWidget {
     return DefultScaffold(
         body: Scaffold(
       appBar: AppBar(
-        title: Text(hadeth.title),
+        title: Text(
+          hadeth.title,
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
       ),
       body: Card(
-        margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 64),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         child: Column(
           children: [
             Expanded(
@@ -28,9 +29,7 @@ class HadethDetails extends StatelessWidget {
                   child: Text(
                     hadeth.content,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ),
               ),

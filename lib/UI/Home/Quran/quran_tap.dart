@@ -247,7 +247,7 @@ class QuranTap extends StatelessWidget {
           height: 5,
           thickness: 2,
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Row(
             children: [
@@ -255,10 +255,7 @@ class QuranTap extends StatelessWidget {
                 child: Center(
                   child: Text(
                     "Chapter Name",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 25,
-                    ),
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                 ),
               ),
@@ -267,10 +264,7 @@ class QuranTap extends StatelessWidget {
                   child: Text(
                     "Verses Name",
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 25,
-                    ),
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                 ),
               ),
