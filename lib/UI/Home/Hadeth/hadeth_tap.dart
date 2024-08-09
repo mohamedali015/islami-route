@@ -33,7 +33,7 @@ class _HadethTapState extends State<HadethTap> {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Text(
-            appTranslation(context).hadethNum,
+            getTranslation(context).hadethNum,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.titleSmall,
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islami/UI/Theme/mytheme.dart';
+import 'package:islami/UI/Providers/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class DefultScaffold extends StatelessWidget {
   Widget body;
@@ -8,7 +9,8 @@ class DefultScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = MyThemeData.isDark;
+    ThemeProvider provider = Provider.of<ThemeProvider>(context);
+    bool isDark = provider.isDarkEnabled();
     return Stack(
       children: [
         Image.asset(

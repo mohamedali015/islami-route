@@ -7,5 +7,11 @@
     "hadethNum" : "Hadeth Number",
     "sebhaTap" : "Sebha",
     "radioTap" : "Radio",
-    "settingTap" : "Setting"
+    "settingTap" : "Setting",
+    "theme" : "Theme",
+    "language" : "Language",
+    "english" : "English" ,
+    "arabic" : "Arabic" ,
+    "light" : "Light",
+    "dark" : "Dark"
 }

@@ -4,9 +4,11 @@ class MyThemeData {
   static const Color lightPrimary = Color(0xFFB7935F);
   static const Color darkPrimary = Color(0xFF141A2E);
   static const Color darkSecondary = Color(0xFFFACC1D);
-  static const bool isDark = false;
 
   static final ThemeData lighttheme = ThemeData(
+      bottomSheetTheme: const BottomSheetThemeData(
+        backgroundColor: Colors.white,
+      ),
       textTheme: const TextTheme(
         titleMedium: TextStyle(
             fontSize: 30,
@@ -61,6 +63,9 @@ class MyThemeData {
       ));
 
   static final ThemeData darktheme = ThemeData(
+      bottomSheetTheme: const BottomSheetThemeData(
+        backgroundColor: darkPrimary,
+      ),
       textTheme: const TextTheme(
         titleMedium: TextStyle(
             fontSize: 30,
