@@ -35,7 +35,7 @@ class _HadethTapState extends State<HadethTap> {
           child: Text(
             appTranslation(context).hadethNum,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
         const Divider(

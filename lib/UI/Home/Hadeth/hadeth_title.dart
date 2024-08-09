@@ -17,23 +17,14 @@ class HadethTitle extends StatelessWidget {
         Navigator.pushNamed(context, HadethDetails.routeName,
             arguments: hadeth);
       },
-      child: Row(
-        children: [
-          Expanded(
-              child: Center(
-                  child: Text(
-            hadeth.title,
-            style: const TextStyle(fontSize: 20),
-          ))),
-          const SizedBox(
-            height: 50,
-            child: VerticalDivider(
-              color: Color(0xFFB7935F),
-              thickness: 2,
-            ),
-          ),
-        ],
-      ),
+      child: Center(
+          child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          hadeth.title,
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
+      )),
     );
   }
 }

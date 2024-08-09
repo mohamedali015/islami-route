@@ -373,10 +373,7 @@ class QuranTap extends StatelessWidget {
                 child: Center(
                   child: Text(
                     appTranslation(context).chapterTitle,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 25,
-                    ),
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                 ),
               ),
@@ -392,10 +389,7 @@ class QuranTap extends StatelessWidget {
                   child: Text(
                     appTranslation(context).versesNumber,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 25,
-                    ),
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                 ),
               ),

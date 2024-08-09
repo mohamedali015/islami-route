@@ -24,12 +24,12 @@ class _QuranDetailsState extends State<QuranDetails> {
     return DefultScaffold(
       body: Scaffold(
         appBar: AppBar(
-          title: Text(arg.chapterTitle),
+          title: Text(
+            arg.chapterTitle,
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
         ),
         body: Card(
-          margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 64),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           child: verses.isNotEmpty
               ? ListView.builder(
                   itemBuilder: (context, index) {
