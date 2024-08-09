@@ -26,7 +26,7 @@ class ChapterTitle extends StatelessWidget {
               child: Center(
                   child: Text(
             title,
-            style: const TextStyle(fontSize: 20),
+            style: Theme.of(context).textTheme.bodyLarge,
           ))),
           const SizedBox(
             height: 50,
@@ -39,7 +39,7 @@ class ChapterTitle extends StatelessWidget {
               child: Center(
                   child: Text(
             verses,
-            style: const TextStyle(fontSize: 20),
+            style: Theme.of(context).textTheme.bodyLarge,
           ))),
         ],
       ),
