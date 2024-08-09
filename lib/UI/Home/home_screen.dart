@@ -5,6 +5,7 @@ import 'package:islami/UI/Home/Radio/radio_tap.dart';
 import 'package:islami/UI/Home/Sebha/sebah_tap.dart';
 import 'package:islami/UI/Home/bottom_nav_item.dart';
 import 'package:islami/UI/defult_scaffold.dart';
+import 'package:islami/ui_utils.dart';
 
 import 'Settings/settings_tap.dart';
 
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Islami",
+            appTranslation(context).appTitle,
             style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
@@ -41,28 +42,28 @@ class _HomeScreenState extends State<HomeScreen> {
           items: [
             BottomNaviItem(
               imagepath: "Assets/Images/quran_icn.png",
-              lable: "Quran",
+            lable: appTranslation(context).quranTap,
               backgroundColor: Theme.of(context).colorScheme.primary,
             ),
             BottomNaviItem(
               imagepath: "Assets/Images/hadeth.png",
-              lable: "Hadeth",
+                lable: appTranslation(context).hadethTap,
               backgroundColor: Theme.of(context).colorScheme.primary,
             ),
             BottomNaviItem(
               imagepath: "Assets/Images/sebha_blue.png",
-              lable: "Sebha",
+              lable: appTranslation(context).sebhaTap,
               backgroundColor: Theme.of(context).colorScheme.primary,
             ),
             BottomNaviItem(
               imagepath: "Assets/Images/radio_blue.png",
-              lable: "Radio",
+              lable: appTranslation(context).radioTap,
               backgroundColor: Theme.of(context).colorScheme.primary,
             ),
             BottomNavigationBarItem(
-              icon: const Icon(Icons.settings),
+              icon: Icon(Icons.settings),
               backgroundColor: Theme.of(context).colorScheme.primary,
-              label: "Settings",
+              label: appTranslation(context).settingTap,
             )
           ],
         ),
@@ -71,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   var taps = [
-    QuranTap(),
+          QuranTap(),
     const HadethTap(),
     const SebhaTap(),
     const RadioTap(),

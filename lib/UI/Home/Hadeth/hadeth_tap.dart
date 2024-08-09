@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/UI/Home/Hadeth/hadeth_title.dart';
 
+import '../../../ui_utils.dart';
+
 class HadethTap extends StatefulWidget {
   const HadethTap({super.key});
 
@@ -29,9 +31,9 @@ class _HadethTapState extends State<HadethTap> {
           thickness: 2,
         ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Text(
-            "El-Ahadeth",
+            appTranslation(context).hadethNum,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.titleSmall,
           ),
