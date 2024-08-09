@@ -12,13 +12,14 @@ class VersesContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-        onTap: () {},
-        child: Text(
-          "$content (${index + 1})",
-          textDirection: TextDirection.rtl,
-          textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.bodyMedium,
-        ));
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(
+        "$content (${index + 1})",
+        textDirection: TextDirection.rtl,
+        textAlign: TextAlign.center,
+        style: Theme.of(context).textTheme.bodyMedium,
+      ),
+    );
   }
 }

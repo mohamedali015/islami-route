@@ -60,11 +60,11 @@ class _HomeScreenState extends State<HomeScreen> {
               lable: appTranslation(context).radioTap,
               backgroundColor: Theme.of(context).colorScheme.primary,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
+            BottomNaviItem(
+              mainIcon: const Icon(Icons.settings),
+              lable: appTranslation(context).settingTap,
               backgroundColor: Theme.of(context).colorScheme.primary,
-              label: appTranslation(context).settingTap,
-            )
+            ),
           ],
         ),
       ),

@@ -4,7 +4,7 @@ class MyThemeData {
   static const Color lightPrimary = Color(0xFFB7935F);
   static const Color darkPrimary = Color(0xFF141A2E);
   static const Color darkSecondary = Color(0xFFFACC1D);
-  static const bool isDark = true;
+  static const bool isDark = false;
 
   static final ThemeData lighttheme = ThemeData(
       textTheme: const TextTheme(
