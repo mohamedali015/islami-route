@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/UI/Home/Hadeth/hadeth_details.dart';
 import 'package:islami/UI/Home/Quran/quran_details.dart';
 import 'package:islami/UI/Home/home_screen.dart';
 import 'package:islami/UI/Splash%20Screen/splash_screen.dart';
 import 'package:islami/UI/Theme/mytheme.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,18 +17,12 @@ class MyApp extends StatelessWidget {
       title: "Islami",
       debugShowCheckedModeBanner: false,
       routes: {
-        SplashScreen.routeName: (_) => const SplashScreen(),
+        SplashScreen.routeName: (_) => SplashScreen(),
         HomeScreen.routeName: (_) => HomeScreen(),
-        QuranDetails.routeName: (_) => const QuranDetails(),
-        HadethDetails.routeName: (_) => const HadethDetails(),
+        QuranDetails.routeName: (_) => QuranDetails(),
       },
       initialRoute: SplashScreen.routeName,
       theme: MyThemeData.lighttheme,
-      darkTheme: MyThemeData.darktheme,
-      themeMode: ThemeMode.light,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      locale: const Locale('en'),
     );
   }
 }
