@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:islami/UI/Home/Settings/theme_bottom_sheet.dart';
+import 'package:islami/UI/Providers/locale_provider.dart';
+import 'package:islami/UI/Providers/theme_provider.dart';
+import 'package:islami/ui_utils.dart';
 
 import 'language_bottom_sheet.dart';
 
-class SettingsTap extends StatelessWidget {
+class SettingsTap extends StatefulWidget {
   const SettingsTap({super.key});
 
   @override
+  State<SettingsTap> createState() => _SettingsTapState();
+}
+
+class _SettingsTapState extends State<SettingsTap> {
+  @override
   Widget build(BuildContext context) {
+    var currentLocale = LocaleProvider.get(context);
+    var currentTheme = ThemeProvider.get(context);
     return Padding(
       padding: const EdgeInsets.only(
         top: 36,
@@ -18,7 +28,7 @@ class SettingsTap extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Theme",
+            getTranslation(context).theme,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           const Divider(
@@ -40,7 +50,7 @@ class SettingsTap extends StatelessWidget {
                 color: Theme.of(context).cardColor,
               ),
               child: Text(
-                "Light",
+                currentTheme.getCurrentTheme(context),
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: Theme.of(context).colorScheme.secondary,
                     ),
@@ -51,7 +61,7 @@ class SettingsTap extends StatelessWidget {
             height: 24,
           ),
           Text(
-            "Language",
+            getTranslation(context).language,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           const Divider(
@@ -73,7 +83,7 @@ class SettingsTap extends StatelessWidget {
                 color: Theme.of(context).cardColor,
               ),
               child: Text(
-                "English",
+                currentLocale.getCurrentLocale(context),
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: Theme.of(context).colorScheme.secondary,
                     ),
@@ -89,7 +99,7 @@ class SettingsTap extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       builder: (context) {
-        return ThemeBottomSheet();
+        return const ThemeBottomSheet();
       },
     );
   }
@@ -98,7 +108,7 @@ class SettingsTap extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       builder: (context) {
-        return LanguageBottomSheet();
+        return const LanguageBottomSheet();
       },
     );
   }

@@ -7,5 +7,11 @@
     "hadethNum" : "رقم الحديث",
     "sebhaTap" : "السبحه",
     "radioTap" : "الراديو",
-    "settingTap" : "الاعدادات"
+    "settingTap" : "الاعدادات",
+    "theme" : "المظهر",
+    "language" : "اللغة",
+    "english" : "الأنجليزية" ,
+    "arabic" : "العربية" ,
+    "light" : "فاتح",
+    "dark" : "داكن"
 }
