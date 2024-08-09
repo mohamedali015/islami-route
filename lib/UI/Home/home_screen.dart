@@ -6,11 +6,14 @@ import 'package:islami/UI/Home/Sebha/sebah_tap.dart';
 import 'package:islami/UI/Home/bottom_nav_item.dart';
 import 'package:islami/UI/Theme/mytheme.dart';
 import 'package:islami/UI/defult_scaffold.dart';
+import 'package:islami/ui_utils.dart';
 
 import 'Settings/settings_tap.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "HomeScreen";
+
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -24,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return DefultScaffold(
       body: Scaffold(
         appBar: AppBar(
-          title: const Text("Islami"),
+          title: Text(appTranslation(context).appTitle),
         ),
         body: taps[selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
@@ -36,17 +39,21 @@ class _HomeScreenState extends State<HomeScreen> {
           currentIndex: selectedIndex,
           items: [
             BottomNaviItem(
-                imagepath: "Assets/Images/quran_icn.png", lable: "Quran"),
+                imagepath: "Assets/Images/quran_icn.png",
+                lable: appTranslation(context).quranTap),
             BottomNaviItem(
-                imagepath: "Assets/Images/hadeth.png", lable: "Hadeth"),
+                imagepath: "Assets/Images/hadeth.png",
+                lable: appTranslation(context).hadethTap),
             BottomNaviItem(
-                imagepath: "Assets/Images/sebha_blue.png", lable: "Sebha"),
+                imagepath: "Assets/Images/sebha_blue.png",
+                lable: appTranslation(context).sebhaTap),
             BottomNaviItem(
-                imagepath: "Assets/Images/radio_blue.png", lable: "Radio"),
+                imagepath: "Assets/Images/radio_blue.png",
+                lable: appTranslation(context).radioTap),
             BottomNavigationBarItem(
               icon: const Icon(Icons.settings),
               backgroundColor: MyThemeData.lightPrimary,
-              label: "Settings",
+              label: appTranslation(context).settingTap,
             )
           ],
         ),
