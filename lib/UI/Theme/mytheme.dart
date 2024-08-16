@@ -57,9 +57,9 @@ class MyThemeData {
       colorScheme: ColorScheme.fromSeed(
         seedColor: const Color(0xFFB7925F),
         primary: const Color(0xFFB7925F),
-        onPrimary: Colors.white,
+        onPrimary: Colors.black.withOpacity(0.8),
         secondary: const Color(0xFFB7925F),
-        onSecondary: Colors.black,
+        onSecondary: Colors.white,
       ));
 
   static final ThemeData darktheme = ThemeData(
@@ -113,7 +113,7 @@ class MyThemeData {
       colorScheme: ColorScheme.fromSeed(
         seedColor: darkPrimary,
         primary: darkPrimary,
-        onPrimary: Colors.white,
+        onPrimary: Colors.black.withOpacity(0.8),
         secondary: darkSecondary,
         onSecondary: Colors.black,
       ));
