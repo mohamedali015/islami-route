@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
   var taps = [
           QuranTap(),
     const HadethTap(),
-    const SebhaTap(),
+    SebhaTap(),
     const RadioTap(),
     const SettingsTap()
   ];

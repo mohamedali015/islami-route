@@ -52,7 +52,7 @@ class _SettingsTapState extends State<SettingsTap> {
               child: Text(
                 currentTheme.getCurrentTheme(context),
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: Theme.of(context).colorScheme.secondary,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
               ),
             ),
@@ -85,7 +85,7 @@ class _SettingsTapState extends State<SettingsTap> {
               child: Text(
                 currentLocale.getCurrentLocale(context),
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: Theme.of(context).colorScheme.secondary,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
               ),
             ),
