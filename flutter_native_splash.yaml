@@ -1,0 +1,18 @@
+flutter_native_splash:
+  background_image: "Assets/Images/background light.png"
+  image: Assets/Images/logo Light.png
+  branding: Assets/Images/route light.png
+
+  background_image_dark: "Assets/Images/background dark.png"
+  image_dark: Assets/Images/logo Dark.png
+  branding_dark: Assets/Images/route dark.png
+
+
+  android_12:
+    background_image: "Assets/Images/background light.png"
+    image: Assets/Images/logo Light.png
+    branding: Assets/Images/route light.png
+
+    background_image_dark: "Assets/Images/background dark.png"
+    image_dark: Assets/Images/logo Dark.png
+    branding_dark: Assets/Images/route dark.png
