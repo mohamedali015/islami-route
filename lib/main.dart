@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         QuranDetails.routeName: (_) => const QuranDetails(),
         HadethDetails.routeName: (_) => const HadethDetails(),
       },
-      initialRoute: SplashScreen.routeName,
+      initialRoute: HomeScreen.routeName,
       theme: MyThemeData.lighttheme,
       darkTheme: MyThemeData.darktheme,
       themeMode: themeProvider.currentTheme,
