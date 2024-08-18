@@ -1,18 +1,18 @@
 flutter_native_splash:
-  background_image: "Assets/Images/background light.png"
-  image: Assets/Images/logo Light.png
-  branding: Assets/Images/route light.png
+  background_image: "Assets/Images/background_light.png"
+  image: Assets/Images/logo_Light.png
+  branding: Assets/Images/route_light.png
 
-  background_image_dark: "Assets/Images/background dark.png"
-  image_dark: Assets/Images/logo Dark.png
-  branding_dark: Assets/Images/route dark.png
+  background_image_dark: "Assets/Images/background_dark.png"
+  image_dark: Assets/Images/logo_Dark.png
+  branding_dark: Assets/Images/route_dark.png
 
 
   android_12:
-    background_image: "Assets/Images/background light.png"
-    image: Assets/Images/logo Light.png
-    branding: Assets/Images/route light.png
-
-    background_image_dark: "Assets/Images/background dark.png"
-    image_dark: Assets/Images/logo Dark.png
-    branding_dark: Assets/Images/route dark.png
+#    image: Assets/Images/logo_Light.png
+#    color: "#eae9e9"
+#    branding: Assets/Images/route_light.png
+#
+#    image_dark: Assets/Images/logo_Dark.png
+#    color_dark: "#1a2440"
+#    branding_dark: Assets/Images/route_dark.png
