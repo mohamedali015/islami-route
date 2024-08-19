@@ -45,7 +45,7 @@ class _SebhaTapState extends State<SebhaTap> {
                   angle: rotate,
                   child: GestureDetector(
                     onTap: () {
-                      onTab();
+                      taspehOnTab();
                     },
                     child: themeProvider.isDarkEnabled()
                         ? Image.asset("Assets/Images/body of seb7a Dark.png")
@@ -82,7 +82,7 @@ class _SebhaTapState extends State<SebhaTap> {
         ),
         GestureDetector(
           onTap: () {
-            onTab();
+            taspehOnTab();
           },
           child: Padding(
             padding: const EdgeInsets.all(14.0),
@@ -107,7 +107,7 @@ class _SebhaTapState extends State<SebhaTap> {
     );
   }
 
-  onTab() {
+  taspehOnTab() {
     rotate += 15;
     counter++;
     if (counter > 33) {
