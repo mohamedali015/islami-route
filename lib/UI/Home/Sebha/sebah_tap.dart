@@ -20,6 +20,7 @@ class _SebhaTapState extends State<SebhaTap> {
   @override
   Widget build(BuildContext context) {
     ThemeProvider themeProvider = ThemeProvider.get(context);
+    var size = MediaQuery.of(context).size;
 
     List<String> taspeh = [
       getTranslation(context).sobhanAllah,
@@ -32,7 +33,7 @@ class _SebhaTapState extends State<SebhaTap> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 26.0),
+          padding: EdgeInsets.only(top: size.height * 0.03),
           child: Stack(
             alignment: Alignment.topCenter,
             children: [
@@ -40,7 +41,7 @@ class _SebhaTapState extends State<SebhaTap> {
                   ? Image.asset("Assets/Images/head of seb7a Dark.png")
                   : Image.asset("Assets/Images/head of seb7a.png"),
               Padding(
-                padding: const EdgeInsets.only(top: 76.0),
+                padding: EdgeInsets.only(top: size.height * 0.086),
                 child: Transform.rotate(
                   angle: rotate,
                   child: GestureDetector(
@@ -57,7 +58,7 @@ class _SebhaTapState extends State<SebhaTap> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 50.0),
+          padding: EdgeInsets.only(top: size.height * 0.07),
           child: Center(
               child: Text(
             getTranslation(context).numberOfTasabeh,
@@ -65,10 +66,15 @@ class _SebhaTapState extends State<SebhaTap> {
           )),
         ),
         Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: EdgeInsets.symmetric(
+            vertical: size.height * 0.03,
+          ),
           child: Center(
             child: Container(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.symmetric(
+                vertical: size.height * 0.025,
+                horizontal: size.width * 0.07,
+              ),
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primary,
                 borderRadius: BorderRadius.circular(16),
@@ -85,10 +91,15 @@ class _SebhaTapState extends State<SebhaTap> {
             taspehOnTab();
           },
           child: Padding(
-            padding: const EdgeInsets.all(14.0),
+            padding: EdgeInsets.symmetric(
+              vertical: size.height * 0.01,
+            ),
             child: Center(
               child: Container(
-                padding: const EdgeInsets.all(16),
+                padding: EdgeInsets.symmetric(
+                  vertical: size.height * 0.025,
+                  horizontal: size.width * 0.07,
+                ),
                 decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.secondary,
                   borderRadius: BorderRadius.circular(16),

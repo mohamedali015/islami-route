@@ -35,7 +35,9 @@ class MyThemeData {
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: lightPrimary,
+        type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.black,
+        showUnselectedLabels: true,
         unselectedItemColor: Colors.white,
         selectedIconTheme: IconThemeData(
           size: 33,
@@ -91,6 +93,8 @@ class MyThemeData {
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: darkPrimary,
+        type: BottomNavigationBarType.fixed,
+        showUnselectedLabels: true,
         selectedItemColor: darkSecondary,
         unselectedItemColor: Colors.white,
         selectedIconTheme: IconThemeData(

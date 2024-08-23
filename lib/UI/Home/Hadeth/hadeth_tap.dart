@@ -22,9 +22,14 @@ class _HadethTapState extends State<HadethTap> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Column(
       children: [
-        Image.asset("Assets/Images/hadith_header.png"),
+        Image.asset(
+          "Assets/Images/hadith_header.png",
+          width: size.width,
+          height: size.height * 0.3,
+        ),
         const Divider(
           color: Color(0xFFB7935F),
           height: 5,

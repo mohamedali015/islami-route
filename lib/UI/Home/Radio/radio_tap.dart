@@ -6,14 +6,19 @@ class RadioTap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 144.0),
-          child: Image.asset("Assets/Images/Radio header.png"),
+          padding: EdgeInsets.only(top: size.height * 0.15),
+          child: Image.asset(
+            "Assets/Images/Radio header.png",
+            width: size.width,
+            height: size.height * 0.28,
+          ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 42.0),
+          padding: EdgeInsets.only(top: size.height * 0.06),
           child: Center(
             child: Text(
               getTranslation(context).quranRadioStation,
@@ -22,7 +27,7 @@ class RadioTap extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 44.0),
+          padding: EdgeInsets.only(top: size.height * 0.08),
           child: Directionality(
             textDirection: TextDirection.ltr,
             child: Center(

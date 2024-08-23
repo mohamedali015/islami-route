@@ -357,9 +357,14 @@ class QuranTap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Locale currentLocale = Localizations.localeOf(context);
+    var size = MediaQuery.of(context).size;
     return Column(
       children: [
-        Image.asset("Assets/Images/quran_header_icn.png"),
+        Image.asset(
+          "Assets/Images/quran_header_icn.png",
+          width: size.width,
+          height: size.height * 0.3,
+        ),
         const Divider(
           color: Color(0xFFB7935F),
           height: 5,

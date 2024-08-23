@@ -21,6 +21,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
 
+  PageController pageController = PageController();
+
   @override
   Widget build(BuildContext context) {
     return DefultScaffold(
@@ -31,11 +33,23 @@ class _HomeScreenState extends State<HomeScreen> {
             style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
-        body: taps[selectedIndex],
+        body: PageView(
+          controller: pageController,
+          onPageChanged: (index) {
+            selectedIndex = index;
+            setState(() {});
+          },
+          children: taps,
+        ),
         bottomNavigationBar: BottomNavigationBar(
           onTap: (index) {
             setState(() {
               selectedIndex = index;
+              pageController.animateToPage(
+                index,
+                duration: const Duration(milliseconds: 800),
+                curve: Curves.decelerate,
+              );
             });
           },
           currentIndex: selectedIndex,
@@ -72,9 +86,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   var taps = [
-          QuranTap(),
+    QuranTap(),
     const HadethTap(),
-    SebhaTap(),
+    const SebhaTap(),
     const RadioTap(),
     const SettingsTap()
   ];

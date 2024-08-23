@@ -18,11 +18,12 @@ class _SettingsTapState extends State<SettingsTap> {
   Widget build(BuildContext context) {
     var currentLocale = LocaleProvider.get(context);
     var currentTheme = ThemeProvider.get(context);
+    var size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(
-        top: 36,
-        right: 12,
-        left: 12,
+      padding: EdgeInsets.only(
+        top: size.height * 0.09,
+        right: size.width * 0.04,
+        left: size.width * 0.04,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
