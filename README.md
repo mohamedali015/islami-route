@@ -1,6 +1,6 @@
 # 🕌 Islami - Flutter Islamic Companion App
 
-<div style="text-align:center;">
+<div align="center">
   <img src="Assets/Images/logo_Dark.png" alt="Islami Logo"/>
 </div>
 
@@ -113,9 +113,6 @@ flutter build web --release
 
 ## 📸 Screenshots
 
-You can add screenshots to `Assets/readme_data/` and reference them here. Example markup:
-
-<!--
 <p style="text-align:center;">
   <img src="Assets/readme_data/splash.jpg" alt="Splash Screen" width="250"/>
   <img src="Assets/readme_data/home_quran.jpg" alt="Home - Quran" width="250"/>
@@ -123,9 +120,7 @@ You can add screenshots to `Assets/readme_data/` and reference them here. Exampl
   <img src="Assets/readme_data/sebha.jpg" alt="Sebha Screen" width="250"/>
     <img src="Assets/readme_data/radio.jpg" alt="Radio" width="250"/>
 <img src="Assets/readme_data/settings.jpg" alt="Settings Screen" width="250"/>
-
 </p>
--->
 
 
 ## 🔧 Configuration
